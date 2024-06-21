@@ -1,18 +1,16 @@
-# Makefile for compiling and cleaning the project
-
-# Compiler and flags
+#変数の定義
 CC = gcc
 CFLAGS = -Wall -O
 LDFLAGS = -lm
 TARGET = main
 
-# Default rule
+#デフォルトターゲット
 all: $(TARGET)
 
-# Rule to compile the target
+#ターゲットと依存関係、コマンドの定義
 $(TARGET): main.c
-    $(CC) $(CFLAGS) -o $(TARGET) main.c $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LDFLAGS)
 
-# Rule to clean the directory
+#cleanターゲットの定義
 clean:
-    rm -f $(TARGET) *~
+	rm -f $(TARGET) *~
