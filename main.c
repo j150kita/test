@@ -6,8 +6,8 @@
 double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないときエラー表示を行い exit(1) とする。 
 {
   double y;//sqrt()はdouble型で返すのでyはdouble型にする
-  if( x < 0 ){//0以上の値でないときエラーを返すので、x<0にする
-    printf("エラー：0以上の値ではありません in myRoot()\n");　      
+  if( x < 0 || isnan(x)){//0以上の値でないときエラーを返すので、x<0にする。また、0/0のように値がnanになる場合もエラーになるようにする。
+    printf("エラー：0以上の値ではありません in myRoot()\n");//不要な全角スペースを削除      
     exit(1);
   }
   y = sqrt(x);
