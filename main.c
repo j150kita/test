@@ -16,7 +16,7 @@ double myRoot(double x) // x の平方根を返す関数。x >= 0 ではない�
 
 int main(void)
 {
-  int i;
+  int i = 0;//while文なのでiの初期化をしていないため、最初にi=0の初期化をする
   double *x = (double *)malloc(sizeof(double) * 100);
 
   while( i <= 100 ){
