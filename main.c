@@ -2,9 +2,10 @@
 #include <stdlib.h> // exit()関数を使用するために追加
 #include <math.h>   // sqrt()関数を使用するために追加
 
-int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないときエラー表示を行い exit(1) とする。 
+//sqrt()はdouble型を返すのでmyRootはdouble型にする
+double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないときエラー表示を行い exit(1) とする。 
 {
-  int y;
+  double y;//sqrt()はdouble型で返すのでyはdouble型にする
   if( x <= 0 ){
     printf("エラー：0以上の値ではありません in myRoot()\n");　      
     exit(1);
